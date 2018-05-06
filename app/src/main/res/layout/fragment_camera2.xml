@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:plainpie="http://schemas.android.com/apk/res-auto">
+
+    <com.thirdai.obsshackathon.utils.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:id="@+id/rlAdjustScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/bAdjusted"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="-4dp"
+            android:background="@drawable/white_bordered_button"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:text="Devam" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlIntroScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"
+            android:background="@drawable/round_rect_dark"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="132dp"
+                android:layout_margin="32dp"
+                android:layout_weight="0.33"
+                android:background="@drawable/round_rect_textview">
+
+                <TextView
+                    android:id="@+id/tvGenderText"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:text="Cinsiyet Oranı"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvGenderPercent"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_below="@+id/tvGenderText"
+                    android:gravity="center_horizontal"
+                    android:text="-"
+                    android:textSize="40sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="132dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="32dp"
+                android:layout_weight="0.33"
+                android:background="@drawable/round_rect_textview">
+
+                <TextView
+                    android:id="@+id/tvAgeRangeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:text="Yaş aralığı"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvAgeRangeValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_below="@+id/tvAgeRangeText"
+                    android:gravity="center_horizontal"
+                    android:text="-"
+                    android:textSize="40sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="132dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="32dp"
+                android:layout_weight="0.33"
+                android:background="@drawable/round_rect_textview">
+
+                <TextView
+                    android:id="@+id/tvAgeMeanText"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_horizontal"
+                    android:padding="16dp"
+                    android:text="Yaş Ortalaması"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvAgeMeanValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_below="@+id/tvAgeMeanText"
+                    android:gravity="center_horizontal"
+                    android:text="-"
+                    android:textSize="40sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bSkip"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="-4dp"
+            android:background="@drawable/white_bordered_button"
+            android:text="Atla ⏯ "
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlAnalyseScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <az.plainpie.PieView
+            android:id="@+id/pieView"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="120dp"
+            plainpie:inner_pie_padding="60"
+            plainpie:percentage="50"
+            plainpie:percentage_size="70"
+            plainpie:inner_text_visibility="true"/>
+    </RelativeLayout>
+</RelativeLayout>
